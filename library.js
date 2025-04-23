@@ -14,9 +14,9 @@ class LibraryItem {
         console.log(`inside the checked out function`);
       if (this.isAvailable) {
         this.isAvailable = false;
-        console.log(`${this.title} has been checked out.`);
+        console.log(`checkout done for ${this.title}`);
       } else {
-        console.log(`${this.title} is currently not available.`);
+        console.log(`${this.title} is in stock for checkout`);
       }
     }
   
@@ -24,9 +24,9 @@ class LibraryItem {
         console.log(`Inside of checkin/return module.`);
       if (!this.isAvailable) {
         this.isAvailable = true;
-        console.log(`${this.title} has been returned.`);
+        console.log(`$Thank you for returning {this.title}.`);
       } else {
-        console.log(`${this.title} was not checked out.`);
+        console.log(`Sorry! ${this.title} need to checked out before returning.`);
       }
     }
   
@@ -79,9 +79,9 @@ LibraryItem.
  }
   
   // Step 3: Instantiate Objects
-  const book1 = new Book("Harry Potter and the Sorcerer's Stone", 101, "J.K. Rowling", "Fantasy");
-  const dvd1 = new DVD("Lagaan", 202, "Ashtosh G", "india", 180);
-  const mag1 = new Magazine("National Geographic", 303, 2024, "NatGeo Partners");
+  const book1 = new Book("Harry Potter and the Sorcerer's Stone", 1, "J.K. Rowling", "Fantasy");
+  const dvd1 = new DVD("Lagaan", 2, "Ashtosh G", "india", 180);
+  const mag1 = new Magazine("Vogue", 3, 2024, "Vougue Retail");
   
   // Step 4: Test Inheritance and Methods
   console.log("\n--- Book ---");
